@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+main {
+margin: auto;
+width: 50%;
+height: 50%;
+}
+
+.portrait {
+    display: block;
+    margin: auto;
+    height: 32vh; 
+}
+
+.answers {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1vh;
+}
