@@ -63,6 +63,10 @@ h1 {
     font-size: 3em;
 }
 
+#shareButton {
+    font-size: 2em;
+}
+
 #portrait {
     display: block;
     margin: auto;
