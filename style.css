@@ -12,9 +12,12 @@ body {
 }
 
 main {
+padding: 1%;
 margin: auto;
-width: 50%;
-height: 50%;
+width: 85%;
+max-width: 700px;
+height: 85%;
+max-height: 900px;
 text-align: center;
 background-color: #4c566a;
 border-radius: 1em;
@@ -28,7 +31,9 @@ h1 {
 .portrait {
     display: block;
     margin: auto;
-    height: 32vh; 
+    height: 70%;
+    max-width: 90%;
+    object-fit: contain;
 }
 
 form {
@@ -42,4 +47,9 @@ footer {
     width: 100%;
     text-align: center;
     padding-bottom: 1vh;
+}
+
+#guessesDiv {
+    white-space: nowrap;
+    display: inline;
 }
