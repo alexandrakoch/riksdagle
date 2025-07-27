@@ -52,6 +52,23 @@ h1 {
     right: +10px;
 }
 
+#submit {
+    margin-top: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#partyLabel, #party {
+    font-size: 1.25em;
+}
+
+span {
+    font-size: 1.25em;
+    letter-spacing: 0;
+}
+
 #resultsMessage {
     font-weight: bold;
     font-size: 1.875em;
@@ -91,4 +108,8 @@ footer {
 #guessesDiv {
     white-space: nowrap;
     display: inline;
+}
+
+a {
+    color: white;
 }
