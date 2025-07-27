@@ -102,7 +102,7 @@ function formCallback(event) {
 
 function shareStringBuilder(result, guessArray) {
     let beginString = "Riksdagle " + currentDate.toISOString().substring(0, 10);
-    const endString = "https://alexandrakoch.github.io/riksdagle/ #riksdagle #svpol"
+    const endString = "https://alexandrakoch.github.io/riksdagle/ #riksdagle"
     return beginString + "\r\n" + guessArray.join("") + "\r\n" + endString
 }
 fillData();
