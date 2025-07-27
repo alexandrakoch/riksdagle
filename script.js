@@ -76,7 +76,6 @@ function formCallback(event) {
         submitButton.disabled = true;
         party.disabled = true;
         result = true;
-        alert("Rätt svarat! " + guessesResult.join(""));
         resultsMessage.innerText = "Snyggt jobbat!"
         resultsEmoji.innerText = guessesResult.join("")
         resultsDialog.showModal();
