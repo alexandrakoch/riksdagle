@@ -65,6 +65,7 @@ async function fillData() {
 function formCallback(event) {
     event.preventDefault();
     var guessedPartyId = partyMap[party.value];
+    party.options[party.selectedIndex].disabled = true;
     var span = document.getElementById("guess" + guesses);
     if (!party.value) {
         return;
