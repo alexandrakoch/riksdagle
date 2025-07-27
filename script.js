@@ -21,6 +21,10 @@ const shareButton = document.getElementById("shareButton")
 //get variable elements 
 const resultsMessage = document.getElementById("resultsMessage")
 const resultsEmoji = document.getElementById("resultsEmoji")
+const portrait = document.getElementById("portrait")
+const nameText = document.getElementById("nameText")
+const partyText = document.getElementById("partyText")
+const constituencyText = document.getElementById("constituencyText")
 
 const currentDate = new Date();
 var guesses = 0;
@@ -30,6 +34,10 @@ let result;
 function daysIntoYear(date) {
     return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
 }
+function getPartyByNumber(number) {
+    return Object.keys(partyMap).find(key => partyMap[key] === number)
+}
+
 
 async function fillData() {
     try {
@@ -39,8 +47,13 @@ async function fillData() {
         }
         const json = await response.json();
         let dayOfYear = daysIntoYear(currentDate);
-        partyAnswer = json[dayOfYear].party
-        document.getElementById("portrait").src = json[dayOfYear].image_url;
+        const person = json[dayOfYear];
+        partyAnswer = person.party
+        portrait.src = person.image_url;
+        nameText.innerText = nameText.innerText + person.name;
+        partyText.innerText = partyText.innerText + getPartyByNumber(partyAnswer);
+        constituencyText.innerText = constituencyText.innerText + person.constituency;
+
     } catch (error) {
         console.error(error.message);
     }
