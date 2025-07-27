@@ -87,8 +87,8 @@ span {
 #portrait {
     display: block;
     margin: auto;
-    height: 70%;
     max-width: 90%;
+    aspect-ratio: 3 / 4;
     object-fit: contain;
 }
 
