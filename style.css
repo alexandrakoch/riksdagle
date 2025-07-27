@@ -28,7 +28,7 @@ h1 {
     padding-bottom: 1vh;
 }
 
-.portrait {
+#portrait {
     display: block;
     margin: auto;
     height: 70%;
