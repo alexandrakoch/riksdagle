@@ -5,15 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riksdagle</title>
-    <link rel="stylesheet" href="style.css" </head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer>
+    </script>
+</head>
 
 <body>
     <main>
-        <img src="https://data.riksdagen.se/filarkiv/bilder/ledamot/78d79a96-956f-4ac3-bbf7-2b15b3d86ce7_max.jpg" class="portrait"><br>
+        <h1>Riksdagle</h1>
+        <img src="https://data.riksdagen.se/filarkiv/bilder/ledamot/78d79a96-956f-4ac3-bbf7-2b15b3d86ce7_max.jpg"
+            class="portrait"><br>
         <div class="answers">
-            <form>
+            <form id="form">
                 <label for="party">Parti</label>
-                <input list="party_list" id="party" name="party"><br>
+                <input list="party_list" id="party" name="party" autocomplete="off">
+                <span id="guess0">⬜</span>
+                <span id="guess1">⬜</span>
+                <span id="guess2">⬜</span>
+                <span id="guess3">⬜</span><br>
                 <datalist id="party_list">
                     <option value="Vänsterpartiet">
                     <option value="Miljöpartiet">
@@ -23,9 +32,10 @@
                     <option value="Moderaterna">
                     <option value="Kristdemokraterna">
                     <option value="Sverigedemokraterna">
-                    <option value="Vänsterpartiet">
+                    <option value="Vilde">
                 </datalist>
-<!--                 <label for="constituency">Valkrets</label>
+                <input type="submit" value="Gissa" id="submit">
+                <!--            <label for="constituency">Valkrets</label>
                 <input id="constituency" name="constituency"><br> -->
             </form>
         </div>

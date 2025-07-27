@@ -4,24 +4,31 @@
 }
 
 body {
+    font-family: "sans-serif";
     display: flex;
     height: 100vh;
+    background-color: #2e3440;
+    color: white;
 }
 
 main {
 margin: auto;
 width: 50%;
 height: 50%;
+text-align: center;
+background-color: #4c566a;
+border-radius: 1em;
+}
+
+h1 {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 .portrait {
     display: block;
     margin: auto;
     height: 32vh; 
-}
-
-.answers {
-    text-align: center;
 }
 
 form {
