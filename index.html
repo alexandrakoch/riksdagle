@@ -17,7 +17,18 @@
         <div class="answers">
             <form id="form">
                 <label for="party" id="partyLabel">Parti: </label>
-                <input list="party_list" id="party" name="party" autocomplete="off">
+                <select id="party" name="party">
+                    <option label=" " value=""></option>
+                    <option value="Vänsterpartiet">Vänsterpartiet</option>
+                    <option value="Miljöpartiet">Miljöpartiet</option>
+                    <option value="Socialdemokraterna">Socialdemokraterna</option>
+                    <option value="Centerpartiet">Centerpartiet</option>
+                    <option value="Liberalerna">Liberalerna</option>
+                    <option value="Moderaterna">Moderaterna</option>
+                    <option value="Kristdemokraterna">Kristdemokraterna</option>
+                    <option value="Sverigedemokraterna">Sverigedemokraterna</option>
+                    <option value="Vilde">Politisk vilde</option>
+                </select>
                 <div id="guessesDiv"><span id="guess0">⬜</span><span id="guess1">⬜</span><span id="guess2">⬜</span><span
                         id="guess3">⬜</span>
                 </div><br>
