@@ -42,7 +42,4 @@ function formCallback(event) {
     guesses++;
     party.value = "";
 }
-
-if(form.addEventListener) {
-    form.addEventListener("submit", formCallback, false);
-}
+form.addEventListener("submit", formCallback, false);
