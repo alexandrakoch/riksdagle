@@ -13,17 +13,16 @@
 <body>
     <main>
         <h1>Riksdagle</h1>
-        <img src="placeholder.jpg"
-            id="portrait"><br>
+        <img src="placeholder.jpg" id="portrait"><br>
         <div class="answers">
             <form id="form">
                 <label for="party">Parti</label>
                 <input list="party_list" id="party" name="party" autocomplete="off">
                 <div id="guessesDiv">
-                <span id="guess0">⬜</span>
-                <span id="guess1">⬜</span>
-                <span id="guess2">⬜</span>
-                <span id="guess3">⬜</span>
+                    <span id="guess0">⬜</span>
+                    <span id="guess1">⬜</span>
+                    <span id="guess2">⬜</span>
+                    <span id="guess3">⬜</span>
                 </div><br>
                 <datalist id="party_list">
                     <option value="Vänsterpartiet">
@@ -41,10 +40,16 @@
                 <input id="constituency" name="constituency"><br> -->
             </form>
         </div>
-
+        <dialog id="resultsModal">
+            <button id="closeModal">
+                X
+            </button>
+            <p id="resultsMessage"></p>
+            <p id="resultsEmoji">⬜⬜⬜⬜</p>
+        </dialog>
     </main>
     <footer>
-        <p>Bild: Sveriges riksdag</p>
+        <p>Bild och data: Sveriges riksdag</p>
     </footer>
 </body>
 
