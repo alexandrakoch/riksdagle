@@ -89,7 +89,7 @@ function formCallback(event) {
         span.innerText = "➡️"
         guessesResult[guesses] = "➡️"
     }
-    if (guesses == 3 & guessedPartyId != partyAnswer) {
+    if (guesses == 3 && guessedPartyId != partyAnswer) {
         submitButton.disabled = true;
         party.disabled = true;
         result = false;
