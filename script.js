@@ -1,6 +1,4 @@
-var form = document.getElementById("form");
-var party = document.getElementById("party");
-var partyMap = {
+const partyMap = {
     Vänsterpartiet: 0,
     Miljöpartiet: 1,
     Socialdemokraterna: 2,
@@ -17,6 +15,9 @@ const submitButton = document.getElementById("submit")
 const resultsDialog = document.getElementById("resultsModal")
 const closeModalButton = document.getElementById("closeModal")
 const shareButton = document.getElementById("shareButton")
+const form = document.getElementById("form");
+const party = document.getElementById("party");
+const copiedText = document.getElementById("copied")
 
 //get variable elements 
 const resultsMessage = document.getElementById("resultsMessage")
@@ -25,7 +26,6 @@ const portrait = document.getElementById("portrait")
 const nameText = document.getElementById("nameText")
 const partyText = document.getElementById("partyText")
 const constituencyText = document.getElementById("constituencyText")
-const copiedText = document.getElementById("copied")
 
 const currentDate = new Date();
 var guesses = 0;
@@ -119,7 +119,7 @@ shareButton.addEventListener("click", () => {
     else {
         navigator.clipboard.writeText(shareString)
         copiedText.style.display = "block"
-        setTimeout(function() {
+        setTimeout(function () {
             copiedText.style.display = "none"
         }, 3000)
     }
