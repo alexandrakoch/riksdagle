@@ -25,6 +25,7 @@ const portrait = document.getElementById("portrait")
 const nameText = document.getElementById("nameText")
 const partyText = document.getElementById("partyText")
 const constituencyText = document.getElementById("constituencyText")
+const copiedText = document.getElementById("copied")
 
 const currentDate = new Date();
 var guesses = 0;
@@ -111,5 +112,16 @@ closeModalButton.addEventListener("click", () => {
     resultsDialog.close();
 });
 shareButton.addEventListener("click", () => {
-    navigator.clipboard.writeText(shareStringBuilder(result, guessesResult))
+    let shareString = shareStringBuilder(result, guessesResult)
+    if (navigator.canShare) {
+        navigator.share(shareString)
+    }
+    else {
+        navigator.clipboard.writeText(shareString)
+        copiedText.style.display = "block"
+        setTimeout(function() {
+            copiedText.style.display = "none"
+        }, 3000)
+    }
+
 })
