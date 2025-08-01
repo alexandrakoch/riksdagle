@@ -113,8 +113,8 @@ closeModalButton.addEventListener("click", () => {
 });
 shareButton.addEventListener("click", () => {
     let shareString = shareStringBuilder(result, guessesResult)
-    if (navigator.canShare(shareString)) {
-        navigator.share(shareString)
+    if (navigator.canShare({ text: shareString })) {
+        navigator.share({ text: shareString })
     }
     else {
         navigator.clipboard.writeText(shareString)
